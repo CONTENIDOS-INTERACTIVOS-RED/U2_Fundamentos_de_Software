@@ -22,9 +22,9 @@
             .content-wrapper.px-lg-4.pt-lg-4.px-xxl-5.py-xxl-5.text-start
               p.home-main-title UNIDAD {{ `${globalData.numeroUnidad}` }}
               h1.home-title.mb-4 {{ globalData.tituloUnidad }}
-              p.descripcion.mb-4 El <em>software</em> es un conjunto de instrucciones y datos que guía al <em>hardware</em> para ejecutar funciones específicas, actuando como su "cerebro". Posee características como intangibilidad, flexibilidad, dependencia del <em>hardware</em> y modularidad. Según su propósito, se clasifica en <em>software</em> de sistema, aplicación, desarrollo y embebido, mientras que su modelo de distribución incluye categorías como propietario, libre y de código abierto. Su ciclo de vida abarca desde el análisis de requisitos, hasta el mantenimiento, con modelos como cascada, ágil y DevOps. Es esencial en comunicación, educación y trabajo, optimizando tareas y procesos. 
+              p.descripcion.mb-4 El diseño de software, se fundamenta en principios como cohesión, acoplamiento y modularidad, que permiten desarrollar sistemas claros, escalables y fáciles de mantener. La cohesión asegura módulos con responsabilidades relacionadas; el acoplamiento busca minimizar dependencias, y la modularidad divide el sistema en componentes autónomos. Además, los diagramas UML facilitan la planificación del software al representar estructuras y dinámicas. Finalmente, el diseño orientado a objetos, organiza sistemas mediante clases, objetos y herencia.  
               
-              p #[b La constancia y la determinación son su mayor fortaleza.]
+              p #[b Siempre se puede construir un software que transforme ideas en soluciones reales.]
 
               .button-container.mt-auto
                 router-link.btn-iniciar.w-100.w-md-auto(:to="{ name: 'introduccion' }")

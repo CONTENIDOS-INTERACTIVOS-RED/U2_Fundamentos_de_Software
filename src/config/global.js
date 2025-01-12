@@ -1,7 +1,7 @@
 export default {
   global: {
-    numeroUnidad: '1',
-    tituloUnidad: 'Introducción al desarrollo de software',
+    numeroUnidad: '2',
+    tituloUnidad: 'Principios de diseño de software',
   },
   menuPrincipal: {
     menu: [
@@ -15,14 +15,20 @@ export default {
         nombreRuta: 'tema1',
         icono: 'far fa-file-alt',
         numero: '1',
-        titulo: 'Concepto y tipos de <em>software</em>',
+        titulo: 'Principios de diseño (cohesión, acoplamiento, modularidad)',
         desarrolloContenidos: true,
         subMenu: [
           {
             icono: 'far fa-file-alt',
             numero: '1.1',
-            titulo: 'Concepto y tipos de <em>software</em>',
+            titulo: 'Tipos de cohesión',
             hash: 't_1_1',
+          },
+          {
+            icono: 'far fa-file-alt',
+            numero: '1.2',
+            titulo: 'Principio de modularidad en el diseño de software',
+            hash: 't_1_2',
           },
         ],
       },
@@ -85,97 +91,95 @@ export default {
   referencias: [
     {
       referencia:
-        'Cedeño Brito, M.E. & Gracia Muñoz, M.C. (2021). Diseño de <em>software</em>. Ediciones Díaz de Santos.',
-      link:
-        'https://openlibrary.org/books/OL37805173M/Dise%C3%B1o_de_<em>software</em>',
+        'Díaz, J. Harari, I. & Amadeo, A. P. (2013). Guía de recomendaciones para diseño de software centrado en el usuario. Editorial de la Universidad Nacional de La Plata. ',
+      link: 'https://elibro.net/es/lc/tecnologicadeloriente/titulos/66410',
     },
     {
       referencia:
-        'Dr. Pérez Rodríguez. (2012). Desarrollo de elementos <em>software</em> para gestión de sistemas (2 ed.). Editorial ICB.',
-      link: 'https://elibro.net/es/lc/tecnologicadeloriente/titulos/106375',
+        'García Bermúdez, J. C. (2023). Diseño de elementos software con tecnologías basadas en componentes. IFCT0609 (2 ed.). IC Editorial. ',
+      link: 'https://elibro.net/es/lc/tecnologicadeloriente/titulos/246682 ',
     },
     {
       referencia:
-        'Pressman, R.S. & Maxim, B.R. (2020). Ingeniería de <em>software</em>: Un enfoque práctico (9 ed.). Educación McGraw-Hill',
-      link:
-        'https://www.javier8a.com/itc/bd1/ld-Ingenieria.de.<em>software</em>.enfoque.practico.7ed.Pressman.PDF',
+        'Jiménez de Parga, C. (2014). UML Aplicaciones en Java y C++. RA-MA Editorial.',
+      link: 'https://elibro.net/es/lc/tecnologicadeloriente/titulos/106466 ',
     },
     {
       referencia:
-        'Heras del Dedo, R. D. L. & Álvarez García, A. (2017). Métodos ágiles: Scrum, Kanban, Lean (ed.). Difusora Larousse - Anaya Multimedia. ',
-      link: 'https://elibro.net/es/lc/tecnologicadeloriente/titulos/122933 ',
+        'Teniente López, E. Costal Costa, D. & Sancho Samsó, M. R. (2015). Especificación de sistemas software en UML. Universitat Politècnica de Catalunya. ',
+      link: 'https://elibro.net/es/lc/tecnologicadeloriente/titulos/61407 ',
     },
     {
       referencia:
-        'Piattini Velthuis, M. & Garzás Parra, J. (2015). Fábricas de <em>software</em>: experiencias, tecnologías y organización. Editorial RA-MA.',
-      link: 'https://elibro.net/es/lc/tecnologicadeloriente/titulos/106389',
+        'Quintero, J. B. (2006). Un estudio comparativo de herramientas para el modelado con UML. Red Universidad Eafit. ',
+      link: 'https://elibro.net/es/lc/tecnologicadeloriente/titulos/5285',
     },
     {
       referencia:
-        'ProArgentina. (2005). Industria del <em>software</em>. Editor del Cid.',
-      link: 'https://elibro.net/es/lc/tecnologicadeloriente/titulos/98183',
-    },
-    {
-      referencia:
-        'Teniente López, E., Costal Costa, D. & Sancho Samsó, MR (2015). Especificación de sistemas <em>software</em> en UML. Universitat Politècnica de Catalunya.',
-      link: ' https://elibro.net/es/lc/tecnologicadeloriente/titulos/61407 ',
-    },
-    {
-      referencia:
-        'Vizcaíno Barceló, A., García Rubio, F. O. & Piattini Velthuis, M. (2014). Desarrollo global de <em>software</em>. Editorial RA-MA.',
-      link: 'https://elibro.net/es/lc/tecnologicadeloriente/titulos/106438',
+        'Vélez Serrano, J. (2011). Diseñar y programar, todo es empezar: una introducción a la Programación Orientada a Objetos usando UML y Java. Dykinson.',
+      link: 'https://elibro.net/es/lc/tecnologicadeloriente/titulos/63076',
     },
   ],
   glosario: [
     {
-      termino: 'Algoritmo',
+      termino: 'Acoplamiento',
       significado:
-        'Conjunto de instrucciones o pasos definidos, para realizar una tarea específica en la programación de <em>software</em>.',
+        'Relación y dependencia entre módulos o componentes de un sistema. Un bajo acoplamiento indica que los módulos interactúan de manera mínima, favoreciendo la flexibilidad y el mantenimiento del sistema.',
     },
     {
-      termino: 'Arquitectura de <em>software</em>',
+      termino: 'Actor',
       significado:
-        'Estructura fundamental del sistema de <em>software</em>, que define la interacción entre los diferentes componentes y subsistemas.',
+        'En los diagramas de casos de uso, representa a una entidad externa (persona, sistema u organización) que interactúa con el sistema, para lograr un objetivo.',
     },
     {
-      termino: 'Código fuente',
+      termino: 'Clase',
       significado:
-        'Estructura fundamental del sistema de <em>software</em>, que define la interacción entre los diferentes componentes y subsistemas.',
+        'Plantilla o modelo en el diseño, orientado a objetos que definen atributos (propiedades) y métodos (comportamientos) comunes a un grupo de objetos.',
     },
     {
-      termino: 'Depuración',
+      termino: 'Cohesión',
       significado:
-        'Proceso de identificar, analizar y corregir errores o fallos, en el código fuente de un programa.',
+        'Grado en que los elementos de un módulo o componente están relacionados y trabajan juntos para cumplir un propósito específico. Alta cohesión mejora la claridad y el mantenimiento.',
     },
     {
-      termino: 'Desarrollo ágil',
+      termino: 'Diagrama de casos de uso',
       significado:
-        'Metodología de desarrollo de <em>software</em>, que enfatiza la flexibilidad, colaboración y entregas incrementales rápidas, adaptándose a cambios en los requisitos.',
+        'Representación gráfica en UML que describe las interacciones entre los actores y el sistema, mostrando las funcionalidades principales desde una perspectiva del usuario.',
     },
     {
-      termino: 'Diseño de <em>software</em>',
+      termino: 'Diagrama de clases',
       significado:
-        'Proceso de planificar y especificar la estructura y la funcionalidad de un <em>software</em>, incluyendo diagramas y especificaciones detalladas.',
+        'Modelo en UML que muestra las clases, sus atributos, métodos y las relaciones entre ellas, representando la estructura estática del sistema.',
     },
     {
-      termino: 'Marco',
+      termino: 'Diagrama de secuencia',
       significado:
-        'Conjunto de bibliotecas y herramientas predefinidas que proporcionan una estructura estándar, para el desarrollo de aplicaciones de <em>software</em>.',
+        'Representación en UML de las interacciones entre objetos a lo largo del tiempo, mostrando el orden cronológico de los mensajes intercambiados.',
     },
     {
-      termino: 'Mantenimiento de <em>software</em>',
+      termino: 'Herencia',
       significado:
-        'Fase del ciclo de vida del <em>software</em> que implica la corrección de errores, actualización y adaptación del <em>software</em>, a nuevos requisitos o entornos.',
+        'Principio del diseño orientado a objetos que permite que una clase (subclase) adquiera las características y comportamientos de otra clase (superclase), promoviendo la reutilización de código.',
     },
     {
-      termino: 'Prototipo',
+      termino: 'Mensaje',
       significado:
-        'Modelo inicial o versión preliminar de un sistema de <em>software</em>, utilizado para evaluar requisitos, probar funcionalidades o generar retroalimentación de los usuarios.',
+        'Comunicación enviada entre objetos en un diagrama de secuencia, representando la invocación de un método o el intercambio de información.',
     },
     {
-      termino: 'Repositorio',
+      termino: 'Modularidad',
       significado:
-        'Espacio de almacenamiento donde se guarda el código fuente de un proyecto de <em>software</em>, facilitando su gestión, colaboración y control de versiones.',
+        'Principio del diseño que implica dividir un sistema en componentes independientes (módulos) que puedan ser desarrollados, probados y mantenidos por separado.',
+    },
+    {
+      termino: 'Objeto',
+      significado:
+        'Instancia concreta de una clase en el diseño orientado a objetos, que encapsula datos (estado) y comportamiento (métodos).',
+    },
+    {
+      termino: 'Relación',
+      significado:
+        'Conexión entre clases en un diagrama de clases, como asociación, agregación, composición o herencia, que define cómo interactúan o dependen entre sí.',
     },
   ],
 }

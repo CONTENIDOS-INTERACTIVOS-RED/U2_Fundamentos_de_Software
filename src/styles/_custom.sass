@@ -65,10 +65,10 @@
   &::after
     content: ''
     position: absolute
-    bottom: -3%
+    bottom: -4%
     left: -43px
     width: calc( 100% + 98px)
-    height: 69%
+    height: 90%
     transform: translateY(-9%)
     background-color: #D9FEFC
     z-index: 0
@@ -89,7 +89,7 @@
     width: calc( 100% + 98px)
     height: 92%
     transform: translateY(-9%)
-    background-color: #EFFCCD
+    background-color: #F0EBFE
   .col-lg-12, .row
     z-index: 1
   @media screen and (max-width: $bp-max-md)
@@ -115,6 +115,25 @@
   
     &::after
       height: 100%
+.bg-h85-4
+  position: relative
+  &::after
+    content: ''
+    position: absolute
+    bottom: -8%
+    left: -43px
+    width: calc( 100% + 98px)
+    height: 95%
+    transform: translateY(-9%)
+    background-color: #D9FEFC
+    z-index: 0
+  .col-lg-12, .row
+    z-index: 1
+  @media screen and (max-width: $bp-max-md)
+    padding: 1rem
+  
+    &::after
+      height: 100%
 
 // Full Width Background
 .bg-full-width
@@ -126,7 +145,7 @@
     padding-left: 1.5rem
     padding-right: 1.5rem
 .bg-full-width-1
-  background-size: contain
+  background-size: cover
   background-repeat: no-repeat
   background-position: bottom
   margin-inline: -3.3rem
@@ -140,10 +159,10 @@
     background-position: top
   &-2
     background-image: url("../assets/bg/bg2.svg") !important
-    background-position: bottom
+    background-position: top
   &-3
     background-image: url("../assets/bg/bg3.svg") !important
-    background-position: bottom
+    background-position: top
   &-4
     background-image: url("../assets/bg/bg4.svg") !important
     background-position: bottom

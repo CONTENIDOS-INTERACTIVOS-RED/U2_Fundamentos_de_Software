@@ -1,374 +1,343 @@
 <template lang="pug">
 .curso-main-container.pb-3
-  BannerInterno(:subTitulo="'1. Concepto y tipos de <em>software</em>'")
+  BannerInterno(:subTitulo="'1. Principios de diseño (cohesión, acoplamiento, modularidad)'")
   .container.tarjeta.tarjeta--blanca.p-4.p-md-5.overflow-hidden
 
+    .bg-color-10.mb-5(data-aos="fade-up")
+      .row.justify-content-center.align-items-center
+        .col-lg-auto
+          figure
+            img(src='@/assets/curso/tema1/1.png', alt='')
+        .col-lg
+          .p-4
+            p.mb-0(data-aos="fade-up") El diseño de software, constituye un pilar esencial en el desarrollo de sistemas tecnológicos que sean funcionales, escalables y de fácil mantenimiento. Aplicar principios sólidos como cohesión, acoplamiento y modularidad, asegura que las soluciones cumplan con los objetivos actuales y puedan adaptarse a necesidades futuras. A continuación, se detalla cada uno de estos principios, destacando su significado, importancia, beneficios y aplicaciones prácticas.
     
-    .row.mb-5.justify-content-center
+    h2.mb-3(data-aos="fade-right") Principio de cohesión en el diseño de software
+
+    .row.mb-5.justify-content-center.align-items-center
       .col-md-8.col-lg-4.order-2
         figure
-          img(src="@/assets/curso/tema1/1.png", data-aos="zoom-in")
+          img(src="@/assets/curso/tema1/2.png", data-aos="zoom-in")
       .col-lg-8.order-1
-        .bg-color-1.p-4(data-aos="fade-left").mb-3
+        .bg-color-1.p-4(data-aos="fade-left").mb-3.mb-lg-0
           .row.align-items-center
             .col-lg-auto
-              img(src="@/assets/curso/tema1/2.svg", style="max-width: 90px").mx-auto
+              img(src="@/assets/curso/tema1/3.svg", style="max-width: 90px").mx-auto
             .col-lg
-              p.mb-0 El <em>software</em> es el conjunto de instrucciones, reglas, datos y programas, diseñados para realizar tareas específicas en dispositivos electrónicos. Estas instrucciones, escritas en lenguajes de programación, son interpretadas por el <em>hardware</em> para ejecutar las funciones requeridas por el usuario. En resumen, el <em>software</em> actúa como el “cerebro” que guía al <em>hardware</em>.
-        p(data-aos="fade-left") Por ejemplo, en un procesador de textos, el <em>software</em> convierte las pulsaciones del teclado en palabras visibles en la pantalla. Sin él, el teclado y el monitor no podrían interactuar entre sí.
+              p.mb-0 La cohesión mide el nivel de relación entre las responsabilidades dentro de un módulo. Un módulo cohesivo concentra funciones y datos que trabajan en conjunto, para un propósito único. Este principio mejora la mantenibilidad, escalabilidad y comprensión del software.
+      
+    h2.mb-3(data-aos="fade-right") Definición y propósito de la cohesión
+
+    p.mb-5 La cohesión evalúa qué tan relacionadas están las partes de un módulo. En un diseño cohesivo, funciones y datos están alineados con un objetivo único, lo que elimina responsabilidades dispersas. Un módulo cohesivo:
+
+    .row.mb-5
+      .col-lg-4.mb-3.mb-lg-0(data-aos="fade-up")
+        div.bg-color-5.h-100.p-4.tarjeta
+          h2 01
+          p.mb-0.text-center <b>Tiene un propósito claro: </b> cada función contribuye a un objetivo común.
+      .col-lg-4.mb-3.mb-lg-0(data-aos="fade-down")
+        div.bg-color-4.h-100.p-4.tarjeta
+          h2 02
+          p.mb-0.text-center <b>Reduce la complejidad interna: </b> al enfocarse en tareas específicas, minimiza interacciones innecesarias.
+      .col-lg-4(data-aos="fade-up")
+        div.bg-color-5.h-100.p-4.tarjeta
+          h2 03
+          p.mb-0.text-center <b>Facilita el mantenimiento: </b> delimita áreas de trabajo claras.
     
-    h2.mb-3(data-aos="fade-right") Características del <em>software</em>
+    #t_1_1.titulo-segundo(data-aos="flip-up")
+      h2 #[span 1.1] Tipos de cohesión
 
-    p.mb-5 El <em>software</em> posee características únicas que lo diferencian de otros componentes tecnológicos:
+    p.mb-5 La cohesión se clasifica en una escala de baja a alta, según la relación entre los elementos del módulo:
 
-    TabsC.color-primario.mb-5
-      .tabs-content.border.px-4.p-md-5.py-3(titulo="Intangibilidad" :icon="require('@/assets/bullets/icon-tab-c-4.svg')" )
-        .row.justify-content-center
-          .col-lg-7.col-xl-8.mb-4.mb-md-0.order-2
-            h4 Intangibilidad
-            p No es físico ni tangible, aunque su funcionamiento se percibe a través de las tareas realizadas. 
-            p <b>Ejemplo:</b> enviar un mensaje desde el teléfono, involucra <em>software</em>, aunque el usuario no vea el código detrás.
-
+    .bg-full-width.bg-fondo-2
+      .px-4.px-md-5.pb-md-3
+        .row.justify-content-center.mb-5
+          .col-lg-8.order-2
+            SlyderF(columnas="col-12 col-lg-6")
         
-          .col-md-8.col-lg-5.col-xl-4.order-1.mb-3
-            figure(data-aos="zoom-in")
-              img(src='@/assets/curso/tema1/3.png', alt='')
-      .tabs-content.border.px-4.p-md-5.py-3(titulo="Flexibilidad y adaptabilidad" :icon="require('@/assets/bullets/icon-tab-c-4.svg')" )
-        .row.justify-content-center
-          .col-lg-7.col-xl-8.mb-4.mb-md-0.order-2
-            h4 Flexibilidad y adaptabilidad
-            p El <em>software</em> puede evolucionar mediante actualizaciones que agregan funciones, corrigen errores y mejoran su rendimiento. 
-            p <b>Ejemplo:</b> aplicaciones móviles con actualizaciones periódicas.
-        
-          .col-md-8.col-lg-5.col-xl-4.order-1.mb-3
-            figure(data-aos="zoom-in")
+              .row.py-4.px-3.h-100
+                .col-10.offset-1.offset-md-0.col-md-12.shadow-app.p-3.py-md-5.px-md-4.bg-8.tarjeta.bg-color-white
+                  img(src='@/assets/curso/tema1/5.svg' alt='AvatarTop' , style="max-width: 90px").mx-auto.mb-3
+                  h4.text-center.mb-4 Cohesión coincidente
+                  p.mb-0.text-center Los elementos están agrupados sin relación clara. 
+                  p.mb-0.text-center <b>Ejemplo:</b> un módulo que gestiona usuarios, calcula precios y procesa pagos. 
+                  p.mb-0.text-center <b>Impacto:</b> dificulta el mantenimiento y comprensión.
+   
+              .row.py-4.px-3.h-100
+                .col-10.offset-1.offset-md-0.col-md-12.shadow-app.p-3.py-md-5.px-md-4.bg-8.tarjeta.bg-color-white
+                  img(src='@/assets/curso/tema1/6.svg' alt='AvatarTop' , style="max-width: 90px").mx-auto.mb-3
+                  h4.text-center.mb-4 Cohesión lógica
+                  p.text-center.mb-0 Los elementos realizan tareas similares, pero no están conectados funcionalmente.  
+                  p.text-center.mb-0 <b>Ejemplo:</b> un módulo para leer, escribir y modificar diferentes tipos de archivos.
+              .row.py-4.px-3.h-100
+                .col-10.offset-1.offset-md-0.col-md-12.shadow-app.p-3.py-md-5.px-md-4.bg-8.tarjeta.bg-color-white
+                  img(src='@/assets/curso/tema1/7.svg' alt='AvatarTop' , style="max-width: 90px").mx-auto.mb-3
+                  h4.text-center.mb-4 Cohesión temporal
+                  p.text-center.mb-0 Agrupa funciones por ejecución en la misma secuencia temporal. 
+                  p.text-center.mb-0 <b>Ejemplo:</b> inicialización de variables y apertura de conexiones.
+              .row.py-4.px-3.h-100
+                .col-10.offset-1.offset-md-0.col-md-12.shadow-app.p-3.py-md-5.px-md-4.bg-8.tarjeta.bg-color-white
+                  img(src='@/assets/curso/tema1/8.svg' alt='AvatarTop' , style="max-width: 90px").mx-auto.mb-3
+                  h4.text-center.mb-4 Cohesión funcional
+                  p.text-center.mb-0 Todos los elementos trabajan en conjunto, para una tarea específica 
+                  p.text-center.mb-0 <b>Ejemplo:</b> un módulo que gestiona reservas en un hotel.         
+
+          .col-lg-4.order-1
+            figure
               img(src='@/assets/curso/tema1/4.png', alt='')
-
-      .tabs-content.border.px-4.p-md-5.py-3(titulo="Dependencia del <em>hardware</em>" :icon="require('@/assets/bullets/icon-tab-c-4.svg')" )
-        .row.justify-content-center
-          .col-lg-7.col-xl-8.mb-4.mb-md-0.order-2
-            h4 Dependencia del <em>hardware</em>
-            p El <em>software</em> necesita de un dispositivo físico donde ejecutarse. Sin <em>hardware</em>, no puede funcionar.
-
-          .col-md-8.col-lg-5.col-xl-4.order-1.mb-3
-            figure(data-aos="zoom-in")
-              img(src='@/assets/curso/tema1/5.png', alt='', style="width: 100%;")
-
-      .tabs-content.border.px-4.p-md-5.py-3(titulo="Modularidad" :icon="require('@/assets/bullets/icon-tab-c-4.svg')" )
-        .row.justify-content-center
-          .col-lg-7.col-xl-8.mb-4.mb-md-0.order-2
-            h4 Modularidad
-            p Se desarrolla en partes o módulos independientes, que trabajan juntos, facilitando el mantenimiento y la actualización. 
-            p <b>Ejemplo:</b> una aplicación con un módulo para usuarios y otro para bases de datos.
-          .col-md-8.col-lg-5.col-xl-4.order-1.mb-3
-            figure(data-aos="zoom-in")
-              img(src='@/assets/curso/tema1/6.png', alt='', style="width: 100%;")
     
+    h2.mb-3(data-aos="fade-right") Importancia de la cohesión en el diseño de software
+
+    p.mb-5 La cohesión impacta directamente la calidad del diseño. Los beneficios incluyen:
+
     .row.justify-content-center.align-items-center.bg-h85.mb-5
       .col-lg-12
         .row.justify-content-center.align-items-center
           .col-lg-7(data-aos="fade-left")
-            h2.mb-5(data-aos="fade-right") Función principal del <em>software</em>
-            p La función básica del <em>software</em> es <b>transformar datos en información útil.</b> Por ejemplo, una hoja de cálculo convierte números en gráficos o análisis, facilitando la toma de decisiones. Además, el <em>software</em> actúa como puente entre el usuario y la máquina, permitiendo la interacción con el <em>hardware</em>.
-            p.text-bold El <em>hardware</em> y el <em>software</em> son complementarios, pero diferentes en su naturaleza:
+            ol.lista-ol--cuadro(data-aos="fade-up").mb-0
+              li.mb-0.d-flex.p-2
+                .lista-ol--cuadro__vineta
+                  span 1
+                p.mb-0 <b>Facilidad de comprensión: </b> los módulos cohesivos son claros y fáciles de entender.
+              li.mb-0.d-flex.p-2 
+                .lista-ol--cuadro__vineta
+                  span 2
+                p.mb-0 <b>Mantenimiento optimizado:</b> sus responsabilidades bien definidas, facilitan modificaciones.
+              li.mb-0.d-flex.p-2 
+                .lista-ol--cuadro__vineta
+                  span 3
+                p.mb-0 <b>Reutilización de código: </b>pueden extraerse y utilizarse en otros proyectos.
+              li.mb-0.d-flex.p-2 
+                .lista-ol--cuadro__vineta
+                  span 4
+                p.mb-0 <b>Reducción de errores:  </b> se minimizan interacciones complejas, que provocan fallos.
           .col-lg-5(data-aos="zoom-in")
-            img.img-fluid(src='@/assets/curso/tema1/7.svg', style="max-width:486px", alt="").mx-auto.mx-lg-0.ms-lg-auto.mb-4.mb-lg-0
-    
-    .titulo-figura.mb-4
-      h5 <b>Tabla</b> 1. 
-      span Diferencias claves entre <em>software</em> y <em>hardware</em>
+            img.img-fluid(src='@/assets/curso/tema1/9.svg', style="max-width:486px", alt="").mx-auto.mx-lg-0.ms-lg-auto.mb-4.mb-lg-0
 
-    .tabla-a.color-terciario.mb-5(data-aos="zoom-in") 
-      table
-        thead
-          tr
-            th.bg-color-3.text-white.text-center Aspecto
-            th.bg-color-3.text-white.text-center <em>software</em>
-            th.bg-color-3.text-white.text-center <em>hardware</em>
-        tbody
-          tr
-            td <b>Naturaleza</b>
-            td Intangible: son instrucciones y datos.
-            td Tangible: es la parte física.
-            
-          tr
-            td <b>Ejemplo</b> 
-            td Aplicaciones, sistemas operativos.
-            td Procesadores, monitores, teclados.
-          tr
-            td <b>Relación</b> 
-            td Da instrucciones para que funcione el <em>hardware</em>.
-            td Proporciona la estructura para el <em>software</em>.
-    
-    p.text-bold Ejemplo práctico:
-    p Imagina un automóvil:
+    h2.mb-3(data-aos="fade-right") Cómo lograr alta cohesión
 
-    .row.mb-5
-      .col-lg-6.mb-3.mb-lg-0(data-aos="fade-up")
-        div.bg-color-4.h-100.p-4
-          h2 01
-          p.mb-0.text-center El <b><em>hardware</em></b> es el cuerpo, motor y volante del coche.
-      .col-lg-6(data-aos="fade-down")
-        div.bg-color-5.h-100.p-4
-          h2 02
-          p.mb-0.text-center El <b><em>software</em></b> es el conductor que toma decisiones sobre cómo y cuándo moverse. 
+    p.mb-5 Lograr alta cohesión requiere estrategias específicas:
 
-    h2.mb-5(data-aos="fade-right") Importancia del <em>software</em> en la vida diaria
-
-    .row.mb-5.justify-content-center
-      .col-md-8.col-lg-4.order-1.order-lg-2.mb-3.mb-lg-0
-        figure
-          img(src="@/assets/curso/tema1/8.png", data-aos="zoom-in")
-      .col-lg-8.order-2.order-lg-1
-        p(data-aos="fade-left") El <em>software</em> está presente en casi todas las actividades cotidianas, facilitando tareas y procesos. Sin él, los dispositivos electrónicos no podrían realizar sus funciones.
-        p.text-bold En la comunicación
-        p La comunicación actual se ha transformado, gracias a diversas herramientas tecnológicas que facilitan la interacción en tiempo real.
-        .bg-color-6.p-4(data-aos="fade-left").mb-3
-          .row.align-items-center
-            .col-lg-auto
-              img(src="@/assets/curso/tema1/9.svg", style="max-width: 90px").mx-auto
-            .col-lg
-              p.text-bold En la educación
-              p.mb-0 La educación se ha fortalecido mediante herramientas tecnológicas que facilitan el acceso al conocimiento y mejoran los procesos de enseñanza y aprendizaje.
-
-    .bg-full-width-1.bg-fondo-1
+    .bg-full-width-1.bg-fondo-3
       .px-4.px-md-5.pb-md-3
+        div.row.justify-content-center.align-items-stretch.mb-5
+          div.col-lg-3.mb-4(data-aos="zoom-in-up")
+            div.bg-color-white.box-shadow.px-4.py-5.h-100
+              img.mx-auto.d-block.mb-4(
+                src="@/assets/curso/tema1/10.svg"
+                alt=""
+                style="width: 90px"
+              )
+              p.text-bold.text-center Definir el propósito del módulo
+              p.mb-0.text-center Identificar claramente su objetivo.
+          
+          div.col-lg-3.mb-4(data-aos="zoom-in-up")
+            div.bg-color-white.box-shadow.px-4.py-5.h-100
+              img.mx-auto.d-block.mb-4(
+                src="@/assets/curso/tema1/11.svg"
+                alt=""
+                style="width: 90px"
+              )
+              p.text-bold.text-center Evitar agregar funciones no relacionadas
+              p.mb-0.text-center Distribuir responsabilidades entre módulos distintos.
+          
+          div.col-lg-3.mb-4(data-aos="zoom-in-up")
+            div.bg-color-white.box-shadow.px-4.py-5.h-100
+              img.mx-auto.d-block.mb-4(
+                src="@/assets/curso/tema1/12.svg"
+                alt=""
+                style="width: 90px"
+              )
+              p.text-bold.text-center Aplicar principios de diseño SOLID
+              p.mb-0.text-center En especial, el principio de responsabilidad única.
+          div.col-lg-3.mb-4(data-aos="zoom-in-up")
+            div.bg-color-white.box-shadow.px-4.py-5.h-100
+              img.mx-auto.d-block.mb-4(
+                src="@/assets/curso/tema1/13.svg"
+                alt=""
+                style="width: 90px"
+              )
+              p.text-bold.text-center Revisar y refactorizar
+              p.mb-0.text-center Asegurar que cada función contribuya al propósito del módulo.
 
-        .row.justify-content-center.align-items-stretch.mb-5
-          .col-lg-4.mb-4(data-aos="zoom-in-up")
-            .custom-image-card-2.h-100
-              img.custom-image-card__image(src="@/assets/curso/tema1/10.png" alt="")
-              .custom-image-card__text.p-4
-                h5.mb-2.text-center Plataformas de aprendizaje en línea
-                p.mb-0.text-center Herramientas como <b>Coursera y Khan Academy</b>, permiten acceder a contenido educativo global desde cualquier lugar. 
-                p.text-center <b>Ventajas:</b> flexibilidad en horarios y acceso a cursos especializados.
-          .col-lg-4.mb-4(data-aos="zoom-in-down")
-            .custom-image-card-2.h-100
-              img.custom-image-card__image(src="@/assets/curso/tema1/11.png" alt="")
-              .custom-image-card__text.p-4
-                h5.mb-2.text-center <em>Software</em> de apoyo al estudio
-                p.mb-0.text-center Aplicaciones como <b>Grammarly y Google Translate</b> mejoran la redacción y traducción de textos.
-          .col-lg-4.mb-4(data-aos="zoom-in-down")
-            .custom-image-card-2.h-100
-              img.custom-image-card__image(src="@/assets/curso/tema1/12.png" alt="")
-              .custom-image-card__text.p-4
-                h5.mb-2.text-center Interacción educativa
-                p.mb-0.text-center Plataformas como <b>Google Classroom o Microsoft Teams</b> facilitan clases virtuales, entregas de tareas y retroalimentación inmediata.
+    .row.justify-content-center.align-items-center.bg-h85-2.mb-5
+      .col-lg-12
+        .row.justify-content-center.align-items-center
+          .col-lg-7(data-aos="fade-left")
+            p.text-bold(data-aos="fade-right") Ejemplo práctico: cohesión en un sistema de gestión escolar
+            p.mb-0 Un módulo cohesivo para la gestión de estudiantes incluiría funciones como registrar información, actualizar datos y consultar calificaciones. En cambio, un módulo no cohesivo que incluya asignar horarios a profesores o procesar pagos de matrícula, sería difícil de mantener.
+          .col-lg-5(data-aos="zoom-in")
+            img.img-fluid(src='@/assets/curso/tema1/14.svg', style="max-width:486px", alt="").mx-auto.mx-lg-0.ms-lg-auto.mb-4.mb-lg-0
     
-    p.text-bold En el trabajo y la productividad
-    p El <em>software</em> permite optimizar tareas, automatizar procesos y mejorar la eficiencia laboral. Por ejemplo:
-
-    .bg-full-width-1.bg-color-7
-      .px-4.px-md-5
-        .row.justify-content-center.p-5
-          .col-lg-8.align-items-center
-            figure
-              img(src="@/assets/curso/tema1/13.svg", data-aos="zoom-in")
-    
-    .bg-full-width-1.bg-color-5.mb-5
-      .px-4.px-md-5.p-4
-        p.mb-0 En resumen, el <em>software</em> es indispensable en áreas como comunicación, educación y trabajo, facilitando la ejecución de tareas y mejorando la eficiencia en todas las actividades humanas.
-
-      
-
-    #t_1_1.titulo-segundo(data-aos="flip-up")
-      h2 #[span 1.1] Concepto y tipos de <em>software</em>
-    
-
-    .row.mb-5.justify-content-center
-      .col-md-8.col-lg-4.mb-3.mb-klg-0
-        figure
-          img(src="@/assets/curso/tema1/14.png", data-aos="zoom-in")
-      .col-lg-8
-        p(data-aos="fade-left") El <em>software</em> es el conjunto de instrucciones, reglas y datos, diseñados para realizar tareas específicas en dispositivos electrónicos. Estas instrucciones, escritas en lenguajes de programación, son interpretadas por el <em>hardware</em> para ejecutar funciones requeridas por el usuario. En resumen, el <em>software</em> actúa como el "cerebro" que guía al <em>hardware</em>.
-        .bg-color-1.p-4(data-aos="fade-left").mb-3
-          .row.align-items-center
-            .col-lg-auto
-              img(src="@/assets/curso/tema1/15.svg", style="max-width: 90px").mx-auto
-            .col-lg
-              p.mb-0 Por ejemplo, cuando se utiliza un procesador de textos, el <em>software</em> convierte las pulsaciones del teclado en palabras visibles en la pantalla, facilitando la interacción entre dispositivos.
-        
-    h2.mb-3(data-aos="fade-right") Características del <em>software</em>
-
-    p El <em>software</em> posee atributos particulares que lo diferencian de otros componentes tecnológicos:
-
-    .bg-full-width.bg-color-info.mb-5
-      .p-4.p-md-5
-        .row.justify-content-center.align-items-center.mb-5
-          .col-lg-8 
-            ImagenInfografica.color-secundario
-                template(v-slot:imagen)
-                  figure
-                    img(src='@/assets/curso/tema1/16.svg', alt='', style="max-width: 1106px;").mx-auto
-
-                .bg-color-white.box-shadow.p-3(x="22%" y="17.5%" numero="+")
-                  h5 Intangibilidad
-                  p No es físico ni tangible; su funcionamiento se percibe a través de las tareas realizadas.
-
-                .bg-color-white.box-shadow.p-3(x="84.5%" y="28%" numero="+")
-                  h5 Flexibilidad y adaptabilidad
-                  p Permite actualizaciones constantes para mejorar funciones, corregir errores y adaptarse a nuevas necesidades.
-
-                .bg-color-white.box-shadow.p-3(x="95.8%" y="62%" numero="+")
-                  h5 Modularidad
-                  p Se desarrolla en módulos independientes, que facilitan su mantenimiento y actualización.
-
-                .bg-color-white.box-shadow.p-3(x="13.7%" y="76%" numero="+")
-                  h5 Dependencia del <em>hardware</em>
-                  p Necesita un dispositivo físico donde ejecutarse; sin <em>hardware</em>, no puede funcionar.
-
-    h2.mb-3(data-aos="fade-right") Clasificación del <em>software</em>
-
-    .bg-full-width.bg-color-2.mb-5
-      .px-4.px-md-5.py-4
-        .row.align-items-center
-          .col-lg-auto
-            img(src="@/assets/curso/tema1/17.svg", style="max-width: 90px").mx-auto
-          .col-lg(data-aos="fade-right")
-            p El <em>software</em> se clasifica en función de su propósito y modelo de distribución.
-            p.mb-0.text-bold Según su propósito
-            p El <em>software</em> se clasifica, según su propósito, facilitando diversas funciones que van desde la gestión del <em>hardware</em> hasta tareas específicas del usuario.
-    
-    .row.mb-5.justify-content-center
-      .col-lg-9
-        .titulo-figura.mb-4
-          h5 <b>Tabla</b> 2. 
-          span Según su propósito
-
-        .tabla-a.color-terciario.mb-5(data-aos="zoom-in") 
-          table
-            thead
-              tr
-                th.bg-color-3.text-white.text-center Tipo de <em>software</em>
-                th.bg-color-3.text-white.text-center Descripción
-                th.bg-color-3.text-white.text-center Ejemplo
-            tbody
-              tr
-                td <b><em>software</em> del sistema</b>
-                td Actúa como intermediario entre el <em>hardware</em> y las aplicaciones, gestionando recursos y operaciones.
-                td Sistemas operativos como Windows o Linux.
-                
-              tr
-                td <b><em>software</em> de aplicación</b> 
-                td Realiza tareas específicas para el usuario final.
-                td Microsoft Word, Google Chrome.
-              tr
-                td <b><em>software</em> de desarrollo</b> 
-                td Herramientas utilizadas para programar otros <em>software</em>.
-                td Visual Studio, Eclipse.
-              tr
-                td <b><em>software</em> embebido</b> 
-                td Integrado en dispositivos específicos, para realizar funciones concretas.
-                td Sistemas en microondas o automóviles.
-
-      .col-md-8.col-lg-3
-        figure
-          img(src="@/assets/curso/tema1/18.svg", data-aos="zoom-in")
-    
-    p.text-bold Según su modelo de distribución
-    p.mb-5 El <em>software</em>, según su modelo de distribución, se clasifica en diferentes categorías que determinan su acceso, uso y desarrollo.
-
-    .row.mb-5.justify-content-center
-      .col-lg-9.order-2
-        .titulo-figura.mb-4
-          h5 <b>Tabla</b> 3. 
-          span Según su modelo de distribución
-
-        .tabla-a.color-terciario.mb-5(data-aos="zoom-in") 
-          table
-            thead
-              tr
-                th.bg-color-3.text-white.text-center Modelo de distribución
-                th.bg-color-3.text-white.text-center Descripción
-                th.bg-color-3.text-white.text-center Ejemplo
-            tbody
-              tr
-                td <b><em>software</em> propietario</b>
-                td Restricciones en el uso, modificación y distribución. No se accede al código fuente.
-                td Microsoft Office, Photoshop.
-                
-              tr
-                td <b><em>software</em> libre</b> 
-                td Permite usar, modificar y redistribuir el código fuente. Promueve la transparencia.
-                td Linux, GIMP.
-              tr
-                td <b><em>software</em> de código abierto</b> 
-                td Similar al <em>software</em> libre, pero enfocado en desarrollo colaborativo. Puede tener restricciones.
-                td OpenOffice, Mozilla Firefox.
-              tr
-                td <b><em>software</em> gratuito</b> 
-                td Disponible sin costo, aunque puede incluir publicidad o versiones premium.
-                td Google Chrome, Skype.
-
-      .col-md-8.col-lg-3.order-1.mb-3.mb-lg-0
-        figure
-          img(src="@/assets/curso/tema1/19.svg", data-aos="zoom-in")
-      
-    p.text-bold Importancia del <em>software</em> en la vida diaria
-    p.mb-5 El <em>software</em> es esencial en la vida cotidiana y permite realizar tareas en áreas como:
-
-    
-    .bg-full-width.bg-fondo-slider.mb-5
-      .p-4.p-md-5
-        SlyderA(tipo="b").bg-white
-          .row.align-items-center.p-4.p-md-5
-            .col-lg-5.mb-3
-              figure
-                img(src="@/assets/curso/tema1/20.png")
-            .col-lg-7
-              h5 Comunicación
-
-              ul.lista-ul--color
-                li.mb-0
-                  i.fas.fa-check-circle.bg-color-8
-                  | #[b Aplicaciones de mensajería y llamadas: ] WhatsApp o Zoom facilitan la comunicación global instantánea.
-                li.mb-0
-                  i.fas.fa-check-circle.bg-color-8
-                  | #[b Redes sociales: ] plataformas como Instagram o Facebook, permiten compartir información y conectar con otras personas.
-          .row.align-items-center.p-4.p-md-5
-            .col-lg-5.mb-3
-              figure
-                img(src="@/assets/curso/tema1/21.png")
-            .col-lg-7
-              h5 Educación
-
-              ul.lista-ul--color
-                li.mb-0
-                  i.fas.fa-check-circle.bg-color-8
-                  | #[b Plataformas de aprendizaje en línea: ] herramientas como Moodle o Coursera, ofrecen acceso a contenido global y flexible.
-                li.mb-0
-                  i.fas.fa-check-circle.bg-color-8
-                  | <b><em>software de apoyo:</em></b> programas como Grammarly o Google Translate, mejoran tareas específicas como redacción o traducción. 
-
-    h2.mb-5(data-aos="fade-right") Trabajo y productividad
-
-    .bg-full-width.bg-color-2.mb-5
-      .px-4.px-md-5.py-4
-        .row.align-items-center
-          .col-lg-auto
-            img(src="@/assets/curso/tema1/22.svg", style="max-width: 90px").mx-auto
-          .col-lg(data-aos="fade-right")
-            p El <em>software</em> optimiza tareas, automatiza procesos y mejora la eficiencia en el ámbito laboral con herramientas como <b>Excel, SAP o Trello.</b> 
-            p El <em>software</em> guía y potencia el funcionamiento del <em>hardware</em>, facilitando desde la comunicación, hasta la gestión empresarial y educativa.
-
+    p.mb-5 La cohesión fomenta claridad, sostenibilidad y mejora la colaboración en equipo. Diseñar módulos cohesivos garantiza que el sistema pueda evolucionar fácilmente.
 
     .bg-full-width.bg-color-9.mb-lg-5
       .px-4.p-md-5
         .row.justify-content-center.align-items-center
-          .col-lg-8
-            h2.mb-4(data-aos="flip-up") Historia y evolución del desarrollo de <em>software</em>
-            p.mb-4(data-aos="fade-right") Se invita a explorar la <b>historia y evolución del desarrollo de <em>software</em></b>, desde el <b>telar de Jacquard</b> en 1804, que introdujo el uso de tarjetas perforadas, hasta los aportes de <b>Charles Babbage</b> y <b>Ada Lovelace</b> en el siglo XIX, pioneros en conceptos de programación y algoritmos. Además, se destaca el papel de <b>Herman Hollerith</b> al aplicar tarjetas perforadas en el procesamiento de datos, sentando las bases para el desarrollo moderno del <em>software</em> y los sistemas computacionales.
+          .col-lg-8.order-2
+            h2.mb-4(data-aos="flip-up") Principio de acoplamiento en el diseño de software
+            p.mb-4(data-aos="fade-right") El documento se centra en el principio de acoplamiento en el diseño de software, destacando su importancia para lograr sistemas modulares, mantenibles y escalables. Se describen los niveles de acoplamiento, desde el ideal desacoplamiento completo hasta el menos deseable acoplamiento de contenido, ofreciendo ejemplos para ilustrar cada tipo.
 
             a.anexo.mb-4.bg-white.w-fit(:href="obtenerLink('/downloads/Anexo_1.pdf')" target="_blank")(data-aos="flip-up")
               .anexo__icono(:style="{'background-color': '#FCDFDB'}")
                 img(src="@/assets/template/icono-pdf.svg")
               .anexo__texto
-                p <strong>Anexo. </strong> Historia y evolución del desarrollo de <em>software</em>.
+                p <strong>Anexo. </strong> Principio de acoplamiento en el diseño de software.
 
-          .col-md-8.col-lg-4
+          .col-md-8.col-lg-4.order-1
             figure(data-aos="zoom-in")
-              img(src='@/assets/curso/tema1/23.png', alt='')
+              img(src='@/assets/curso/tema1/15.png', alt='')
+    
 
+    #t_1_2.titulo-segundo(data-aos="flip-up")
+      h2 #[span 1.2] Principio de modularidad en el diseño de software
+
+    .row.mb-5.justify-content-center.align-items-center
+      .col-md-8.col-lg-4.order-2
+        figure
+          img(src="@/assets/curso/tema1/16.png", data-aos="zoom-in")
+      .col-lg-8.order-1
+        p El principio de modularidad es un enfoque esencial en el diseño de software, que busca dividir un sistema complejo en partes más pequeñas y manejables, llamadas módulos. Cada módulo tiene una función específica y está diseñado para ser independiente o, al menos, para mantener una dependencia mínima con otros módulos. Este enfoque facilita el desarrollo, mantenimiento y evolución del software, mejorando su calidad.
+        .bg-color-1.p-4(data-aos="fade-left").mb-3.mb-lg-0
+          .row.align-items-center
+            .col-lg-auto
+              img(src="@/assets/curso/tema1/17.svg", style="max-width: 90px").mx-auto
+            .col-lg
+              p.mb-0 La modularidad se define como la capacidad de un sistema para dividirse en componentes funcionales autónomos, que trabajan juntos para cumplir los objetivos generales. Un módulo es una unidad lógica, conceptual o física, que agrupa elementos relacionados, como funciones, datos o clases, y opera como una entidad separada.
+    
+    h2.mb-3(data-aos="fade-right") Propiedades claves de un módulo
+
+    p.mb-5 Los módulos son componentes esenciales en el desarrollo de sistemas, definidos por propiedades claves que aseguran su funcionalidad y eficiencia.
+
+    .bg-full-width-1.bg-fondo-2
+      .px-4.px-md-5.pb-md-3
+        .row.justify-content-center
+          .col-lg-8
+            figure
+              img(src="@/assets/curso/tema1/18.svg", data-aos="zoom-in") 
+        
+        h2.mb-3(data-aos="fade-right") Importancia de la modularidad
+
+        p.mb-5 La modularidad es un principio clave en el desarrollo de sistemas, por los múltiples beneficios que aporta.
+
+        .row.justify-content-center.align-items-center.bg-h85-4.mb-5
+          .col-lg-12
+            .row.justify-content-center.align-items-center
+              .col-lg-7(data-aos="fade-left")
+                ol.lista-ol--cuadro(data-aos="fade-up").mb-0
+                  li.mb-0.d-flex.p-2
+                    .lista-ol--cuadro__vineta
+                      span 1
+                    p.mb-0 <b>Mantenibilidad: </b> facilita la localización y corrección de errores, además de implementar cambios.
+                  li.mb-0.d-flex.p-2 
+                    .lista-ol--cuadro__vineta
+                      span 2
+                    p.mb-0 <b>Reutilización: </b> los módulos bien diseñados pueden utilizarse en otros proyectos o partes del sistema, ahorrando tiempo y esfuerzo.
+                  li.mb-0.d-flex.p-2 
+                    .lista-ol--cuadro__vineta
+                      span 3
+                    p.mb-0 <b>Escalabilidad: </b>permite agregar nuevas funcionalidades sin reestructurar el software existente.
+                  li.mb-0.d-flex.p-2 
+                    .lista-ol--cuadro__vineta
+                      span 4
+                    p.mb-0 <b>Colaboración: </b> los equipos de desarrollo pueden trabajar simultáneamente en diferentes módulos.
+                  li.mb-0.d-flex.p-2 
+                    .lista-ol--cuadro__vineta
+                      span 5
+                    p.mb-0 <b>Adaptabilidad: </b> los módulos independientes facilitan la adaptación del sistema a nuevas tecnologías o requisitos.
+              .col-lg-5(data-aos="zoom-in")
+                img.img-fluid(src='@/assets/curso/tema1/19.svg', style="max-width:486px", alt="").mx-auto.mx-lg-0.ms-lg-auto.mb-4.mb-lg-0
+    
+    TabsC.color-primario.mb-5
+      .tabs-content.border.px-4.p-md-5.py-3(titulo="Alta cohesión" :icon="require('@/assets/bullets/icon-tab-c-4.svg')" )
+        .row.justify-content-center
+          .col-lg-7.col-xl-8.mb-4.mb-md-0.order-2
+            h4 Alta cohesión
+            p Cada módulo debe enfocarse en una tarea específica y contener elementos relacionados entre sí.  
+            p <b>Ejemplo:</b> un módulo dedicado exclusivamente a la autenticación de usuarios
+
+        
+          .col-md-8.col-lg-5.col-xl-4.order-1.mb-3
+            figure(data-aos="zoom-in")
+              img(src='@/assets/curso/tema1/20.png', alt='')
+      .tabs-content.border.px-4.p-md-5.py-3(titulo="Bajo acoplamiento" :icon="require('@/assets/bullets/icon-tab-c-4.svg')" )
+        .row.justify-content-center
+          .col-lg-7.col-xl-8.mb-4.mb-md-0.order-2
+            h4 Bajo acoplamiento
+            p Los módulos deben ser lo más independientes posible, permitiendo cambiar o reemplazar un módulo, sin afectar a los demás.  
+            p <b>Ejemplo:</b> un módulo de base de datos diseñado para ser sustituible sin impactar al módulo de lógica de negocio.
+        
+          .col-md-8.col-lg-5.col-xl-4.order-1.mb-3
+            figure(data-aos="zoom-in")
+              img(src='@/assets/curso/tema1/21.png', alt='')
+
+      .tabs-content.border.px-4.p-md-5.py-3(titulo="Interfaces bien definidas" :icon="require('@/assets/bullets/icon-tab-c-4.svg')" )
+        .row.justify-content-center
+          .col-lg-7.col-xl-8.mb-4.mb-md-0.order-2
+            h4 Interfaces bien definidas
+            p Los módulos deben interactuar mediante interfaces claras y consistentes, evitando exponer detalles internos. 
+            p <b>Ejemplo:</b> una API que facilita la comunicación entre los módulos de <em>frontend</em> y <em>back-end</em>.
+
+          .col-md-8.col-lg-5.col-xl-4.order-1.mb-3
+            figure(data-aos="zoom-in")
+              img(src='@/assets/curso/tema1/22.png', alt='', style="width: 100%;")
+
+      .tabs-content.border.px-4.p-md-5.py-3(titulo="Encapsulación" :icon="require('@/assets/bullets/icon-tab-c-4.svg')" )
+        .row.justify-content-center
+          .col-lg-7.col-xl-8.mb-4.mb-md-0.order-2
+            h4 Encapsulación
+            p Los detalles internos de un módulo, deben estar ocultos para otros módulos.  
+            p <b>Ejemplo:</b> una clase que oculta la lógica de un algoritmo y expone solo métodos públicos para interactuar con ella.
+          .col-md-8.col-lg-5.col-xl-4.order-1.mb-3
+            figure(data-aos="zoom-in")
+              img(src='@/assets/curso/tema1/23.png', alt='', style="width: 100%;")
+    
+    h2.mb-3(data-aos="fade-right") Ejemplo del principio de modularidad
+
+    p.mb-5 En un sistema sin modularidad, funcionalidades como autenticación, gestión de usuarios y lógica de negocio, podrían encontrarse en un único archivo, lo que dificulta el mantenimiento. Por el contrario, un diseño modular, separa estas funcionalidades en módulos independientes:
+
+    .row.justify-content-center.align-items-center.bg-h85-2.mb-5
+      .col-lg-12
+        .row.justify-content-center.align-items-center
+          .col-lg-7(data-aos="fade-left")
+            ol.lista-ol--cuadro(data-aos="fade-up")
+              li.d-flex.p-4
+                .lista-ol--cuadro__vineta
+                  span 1
+                p.mb-0 Un módulo para la autenticación de usuarios.
+              li.d-flex.p-4 
+                .lista-ol--cuadro__vineta
+                  span 2
+                p.mb-0 Un módulo para la gestión de perfiles.
+              li.d-flex.p-4 
+                .lista-ol--cuadro__vineta
+                  span 3
+                p.mb-0 Un módulo para la lógica de negocio.
+            p.mb-0 Cada módulo interactúa mediante interfaces claras, lo que minimiza el impacto de los cambios en un módulo sobre los demás.          
+          .col-lg-5(data-aos="zoom-in")
+            img.img-fluid(src='@/assets/curso/tema1/24.svg', style="max-width:486px", alt="").mx-auto.mx-lg-0.ms-lg-auto.mb-4.mb-lg-0
+    
+    p.mb-5 La modularidad en el diseño de sistemas ,ofrece tanto ventajas como desventajas, que deben considerarse cuidadosamente. 
+
+
+    
+    .bg-full-width.bg-fondo-slider.mb-5
+      .p-4.p-md-5
+        figure
+          .video
+            iframe(width="560" height="315" src="https://www.youtube.com/embed/9cqLwqWDCzs?si=F1b2M6SlLRnGqFf9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+
+    .bg-full-width.bg-color-2.mb-5
+      .px-4.px-md-5.py-4
+        .row.align-items-center
+          .col-lg-auto
+            img(src="@/assets/curso/tema1/25.svg", style="max-width: 90px").mx-auto
+          .col-lg(data-aos="fade-right")
+            p.mb-0 El principio de modularidad es esencial para construir sistemas de software mantenibles y escalables. Dividir un sistema en módulos funcionales con alta cohesión y bajo acoplamiento, permite gestionar la complejidad del desarrollo y facilita su evolución. Sin embargo, es crucial equilibrar la cantidad y tamaño de los módulos, para evitar complicaciones innecesarias. Este principio es un fundamento de metodologías modernas como la programación orientada a objetos, la arquitectura basada en microservicios y las prácticas de desarrollo ágil.
+
+
+
+  
 
 
     .bg-full-width.border-top.color-primario
@@ -380,19 +349,18 @@
 
             p.d-flex.my-4
               img.me-3(src='@/assets/componentes/link.svg' :style="{'max-width':'16px'}")
-              a(href="https://elibro.net/es/lc/tecnologicadeloriente/titulos/62495" target="_blank" rel="noopener noreferrer") Casado Iglesias, C. (2015). Entornos de desarrollo. RA-MA Editorial. 
+              a(href="https://elibro.net/es/lc/tecnologicadeloriente/titulos/68913 " target="_blank" rel="noopener noreferrer") Echeverri, J. Aristizábal, M. & González, L. (2013). Reflexiones sobre ingeniería de requisitos y pruebas de software. Corporación Universitaria Remington. 
             p.d-flex.my-4
               img.me-3(src='@/assets/componentes/link.svg' :style="{'max-width':'16px'}")
-              a(href="https://www.appandweb.es/blog/ " target="_blank" rel="noopener noreferrer") Tipos de <em>software</em>.
+              a(href="https://elblogdelprogramador.com/#gsc.tab=0 " target="_blank" rel="noopener noreferrer") El Blog Del Programador.
             p.d-flex.my-4
               img.me-3(src='@/assets/componentes/link.svg' :style="{'max-width':'16px'}")
-              a(href="https://www.tiobe.com/tiobe-index/" target="_blank" rel="noopener noreferrer") Índice TIOBE.
-
+              a(href="https://www.euroinnova.com/https://www.autodesk.com/solutions/generative-design-ai-software?msockid=27322ed8fb286645002a3a85fa8767cb" target="_blank" rel="noopener noreferrer") Autodesk Generative Design.
             
 
             p.d-flex.my-4
               img.me-3(src='@/assets/template/icono-yt.svg' :style="{'max-width':'16px'}")
-              a(href="https://www.youtube.com/watch?v=Hedi-Qobgbc" target="_blank" rel="noopener noreferrer") Elite <em>software</em> Engineering. (2020). 01 - Ingeniería de Requerimientos ¿Qué son los requerimientos de <em>software</em>?.
+              a(href="https://www.youtube.com/watch?v=STw8rKDFMaQ" target="_blank" rel="noopener noreferrer") Canarias JS. (2019). Simplicidad y otros principios del diseño de software. 
 
           .col-12.col-md-6.col-lg-3.offset-lg-1
             figure
