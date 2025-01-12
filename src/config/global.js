@@ -27,7 +27,8 @@ export default {
           {
             icono: 'far fa-file-alt',
             numero: '1.2',
-            titulo: 'Principio de modularidad en el diseño de software',
+            titulo:
+              'Principio de modularidad en el diseño de <em>software</em>',
             hash: 't_1_2',
           },
         ],
@@ -36,7 +37,7 @@ export default {
         nombreRuta: 'tema2',
         icono: 'far fa-file-alt',
         numero: '2',
-        titulo: 'Ciclo de vida del desarrollo de <em>software</em>',
+        titulo: 'Diagramas UML básicos',
         desarrolloContenidos: true,
         subMenu: [
           {
@@ -91,12 +92,12 @@ export default {
   referencias: [
     {
       referencia:
-        'Díaz, J. Harari, I. & Amadeo, A. P. (2013). Guía de recomendaciones para diseño de software centrado en el usuario. Editorial de la Universidad Nacional de La Plata. ',
+        'Díaz, J. Harari, I. & Amadeo, A. P. (2013). Guía de recomendaciones para diseño de <em>software</em> centrado en el usuario. Editorial de la Universidad Nacional de La Plata. ',
       link: 'https://elibro.net/es/lc/tecnologicadeloriente/titulos/66410',
     },
     {
       referencia:
-        'García Bermúdez, J. C. (2023). Diseño de elementos software con tecnologías basadas en componentes. IFCT0609 (2 ed.). IC Editorial. ',
+        'García Bermúdez, J. C. (2023). Diseño de elementos <em>software</em> con tecnologías basadas en componentes. IFCT0609 (2 ed.). IC Editorial. ',
       link: 'https://elibro.net/es/lc/tecnologicadeloriente/titulos/246682 ',
     },
     {
@@ -106,7 +107,7 @@ export default {
     },
     {
       referencia:
-        'Teniente López, E. Costal Costa, D. & Sancho Samsó, M. R. (2015). Especificación de sistemas software en UML. Universitat Politècnica de Catalunya. ',
+        'Teniente López, E. Costal Costa, D. & Sancho Samsó, M. R. (2015). Especificación de sistemas <em>software</em> en UML. Universitat Politècnica de Catalunya. ',
       link: 'https://elibro.net/es/lc/tecnologicadeloriente/titulos/61407 ',
     },
     {

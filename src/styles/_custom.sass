@@ -44,6 +44,8 @@
     background-color: #E7FAB5
   &-14
     background-color: #C5B4FE
+  &-15
+    background-color: #F0EBFE
   
   &-info
     background-color: #E8EEFD
@@ -102,12 +104,12 @@
   &::after
     content: ''
     position: absolute
-    bottom: -8%
+    top: 9%
     left: -43px
     width: calc( 100% + 98px)
-    height: 96%
+    height: 100%
     transform: translateY(-9%)
-    background-color: #C6FDFB
+    background-color: #F0EBFE
   .col-lg-12, .row
     z-index: 1
   @media screen and (max-width: $bp-max-md)
@@ -145,7 +147,7 @@
     padding-left: 1.5rem
     padding-right: 1.5rem
 .bg-full-width-1
-  background-size: cover
+  background-size: contain
   background-repeat: no-repeat
   background-position: bottom
   margin-inline: -3.3rem
@@ -296,16 +298,16 @@ $custom-card-img-height: 322px
   .linea-tiempo-d__item__content__title
     padding: 28px
     border-radius: 5px 5px 0px 0px
-    background-color: lighten($color-primario, 30%)
+    background-color: lighten($color-acento-contenido, 30%)
   .linea-tiempo-d__item__content__title.active
-    background-color: $color-primario !important
+    background-color: $color-acento-contenido !important
   .linea-tiempo-d__item__content__slot
     border-radius: 0px 0px 5px 5px
-    background-color: lighten($color-primario, 37%) !important
+    background-color: lighten($color-acento-contenido, 37%) !important
   .linea-tiempo-d__item__number
-    background-color: lighten($color-primario, 30%)
+    background-color: lighten($color-acento-contenido, 30%)
   .linea-tiempo-d__item--selected .linea-tiempo-d__item__number
-    background-color: $color-primario !important
+    background-color: $color-acento-contenido !important
   .linea-tiempo-d__item__dots:after
     border-left: 0px
   .fa-angle-up, .fa-angle-down

@@ -10,9 +10,9 @@
             img(src='@/assets/curso/tema1/1.png', alt='')
         .col-lg
           .p-4
-            p.mb-0(data-aos="fade-up") El diseño de software, constituye un pilar esencial en el desarrollo de sistemas tecnológicos que sean funcionales, escalables y de fácil mantenimiento. Aplicar principios sólidos como cohesión, acoplamiento y modularidad, asegura que las soluciones cumplan con los objetivos actuales y puedan adaptarse a necesidades futuras. A continuación, se detalla cada uno de estos principios, destacando su significado, importancia, beneficios y aplicaciones prácticas.
+            p.mb-0(data-aos="fade-up") El diseño de <em>software</em>, constituye un pilar esencial en el desarrollo de sistemas tecnológicos que sean funcionales, escalables y de fácil mantenimiento. Aplicar principios sólidos como cohesión, acoplamiento y modularidad, asegura que las soluciones cumplan con los objetivos actuales y puedan adaptarse a necesidades futuras. A continuación, se detalla cada uno de estos principios, destacando su significado, importancia, beneficios y aplicaciones prácticas.
     
-    h2.mb-3(data-aos="fade-right") Principio de cohesión en el diseño de software
+    h2.mb-3(data-aos="fade-right") Principio de cohesión en el diseño de <em>software</em>
 
     .row.mb-5.justify-content-center.align-items-center
       .col-md-8.col-lg-4.order-2
@@ -24,7 +24,7 @@
             .col-lg-auto
               img(src="@/assets/curso/tema1/3.svg", style="max-width: 90px").mx-auto
             .col-lg
-              p.mb-0 La cohesión mide el nivel de relación entre las responsabilidades dentro de un módulo. Un módulo cohesivo concentra funciones y datos que trabajan en conjunto, para un propósito único. Este principio mejora la mantenibilidad, escalabilidad y comprensión del software.
+              p.mb-0 La cohesión mide el nivel de relación entre las responsabilidades dentro de un módulo. Un módulo cohesivo concentra funciones y datos que trabajan en conjunto, para un propósito único. Este principio mejora la mantenibilidad, escalabilidad y comprensión del <em>software</em>.
       
     h2.mb-3(data-aos="fade-right") Definición y propósito de la cohesión
 
@@ -53,7 +53,7 @@
       .px-4.px-md-5.pb-md-3
         .row.justify-content-center.mb-5
           .col-lg-8.order-2
-            SlyderF(columnas="col-12 col-lg-6")
+            SlyderF(columnas="col-12 col-lg-6")(data-aos="zoom-in")
         
               .row.py-4.px-3.h-100
                 .col-10.offset-1.offset-md-0.col-md-12.shadow-app.p-3.py-md-5.px-md-4.bg-8.tarjeta.bg-color-white
@@ -82,13 +82,13 @@
                   p.text-center.mb-0 Todos los elementos trabajan en conjunto, para una tarea específica 
                   p.text-center.mb-0 <b>Ejemplo:</b> un módulo que gestiona reservas en un hotel.         
 
-          .col-lg-4.order-1
+          .col-md-8.col-lg-4.order-1
             figure
               img(src='@/assets/curso/tema1/4.png', alt='')
     
-    h2.mb-3(data-aos="fade-right") Importancia de la cohesión en el diseño de software
+        h2.mb-3(data-aos="fade-right") Importancia de la cohesión en el diseño de <em>software</em>
 
-    p.mb-5 La cohesión impacta directamente la calidad del diseño. Los beneficios incluyen:
+        p.mb-5 La cohesión impacta directamente la calidad del diseño. Los beneficios incluyen:
 
     .row.justify-content-center.align-items-center.bg-h85.mb-5
       .col-lg-12
@@ -118,11 +118,11 @@
 
     p.mb-5 Lograr alta cohesión requiere estrategias específicas:
 
-    .bg-full-width-1.bg-fondo-3
+    .bg-full-width.bg-fondo-3
       .px-4.px-md-5.pb-md-3
         div.row.justify-content-center.align-items-stretch.mb-5
           div.col-lg-3.mb-4(data-aos="zoom-in-up")
-            div.bg-color-white.box-shadow.px-4.py-5.h-100
+            div.bg-color-white.box-shadow.px-4.py-5.h-100.tarjeta
               img.mx-auto.d-block.mb-4(
                 src="@/assets/curso/tema1/10.svg"
                 alt=""
@@ -132,7 +132,7 @@
               p.mb-0.text-center Identificar claramente su objetivo.
           
           div.col-lg-3.mb-4(data-aos="zoom-in-up")
-            div.bg-color-white.box-shadow.px-4.py-5.h-100
+            div.bg-color-white.box-shadow.px-4.py-5.h-100.tarjeta
               img.mx-auto.d-block.mb-4(
                 src="@/assets/curso/tema1/11.svg"
                 alt=""
@@ -142,7 +142,7 @@
               p.mb-0.text-center Distribuir responsabilidades entre módulos distintos.
           
           div.col-lg-3.mb-4(data-aos="zoom-in-up")
-            div.bg-color-white.box-shadow.px-4.py-5.h-100
+            div.bg-color-white.box-shadow.px-4.py-5.h-100.tarjeta
               img.mx-auto.d-block.mb-4(
                 src="@/assets/curso/tema1/12.svg"
                 alt=""
@@ -151,7 +151,7 @@
               p.text-bold.text-center Aplicar principios de diseño SOLID
               p.mb-0.text-center En especial, el principio de responsabilidad única.
           div.col-lg-3.mb-4(data-aos="zoom-in-up")
-            div.bg-color-white.box-shadow.px-4.py-5.h-100
+            div.bg-color-white.box-shadow.px-4.py-5.h-100.tarjeta
               img.mx-auto.d-block.mb-4(
                 src="@/assets/curso/tema1/13.svg"
                 alt=""
@@ -160,44 +160,44 @@
               p.text-bold.text-center Revisar y refactorizar
               p.mb-0.text-center Asegurar que cada función contribuya al propósito del módulo.
 
-    .row.justify-content-center.align-items-center.bg-h85-2.mb-5
-      .col-lg-12
-        .row.justify-content-center.align-items-center
-          .col-lg-7(data-aos="fade-left")
-            p.text-bold(data-aos="fade-right") Ejemplo práctico: cohesión en un sistema de gestión escolar
-            p.mb-0 Un módulo cohesivo para la gestión de estudiantes incluiría funciones como registrar información, actualizar datos y consultar calificaciones. En cambio, un módulo no cohesivo que incluya asignar horarios a profesores o procesar pagos de matrícula, sería difícil de mantener.
-          .col-lg-5(data-aos="zoom-in")
-            img.img-fluid(src='@/assets/curso/tema1/14.svg', style="max-width:486px", alt="").mx-auto.mx-lg-0.ms-lg-auto.mb-4.mb-lg-0
+        .row.justify-content-center.align-items-center.bg-h85-2.mb-5
+          .col-lg-12
+            .row.justify-content-center.align-items-center
+              .col-lg-7(data-aos="fade-left").mb-3.mb-lg-0
+                p.text-bold(data-aos="fade-right") Ejemplo práctico: cohesión en un sistema de gestión escolar
+                p.mb-0 Un módulo cohesivo para la gestión de estudiantes incluiría funciones como registrar información, actualizar datos y consultar calificaciones. En cambio, un módulo no cohesivo que incluya asignar horarios a profesores o procesar pagos de matrícula, sería difícil de mantener.
+              .col-lg-5(data-aos="zoom-in")
+                img.img-fluid(src='@/assets/curso/tema1/14.svg', style="max-width:486px", alt="").mx-auto.mx-lg-0.ms-lg-auto.mb-4.mb-lg-0
     
     p.mb-5 La cohesión fomenta claridad, sostenibilidad y mejora la colaboración en equipo. Diseñar módulos cohesivos garantiza que el sistema pueda evolucionar fácilmente.
 
-    .bg-full-width.bg-color-9.mb-lg-5
+    .bg-full-width.bg-color-9.mb
       .px-4.p-md-5
         .row.justify-content-center.align-items-center
           .col-lg-8.order-2
-            h2.mb-4(data-aos="flip-up") Principio de acoplamiento en el diseño de software
-            p.mb-4(data-aos="fade-right") El documento se centra en el principio de acoplamiento en el diseño de software, destacando su importancia para lograr sistemas modulares, mantenibles y escalables. Se describen los niveles de acoplamiento, desde el ideal desacoplamiento completo hasta el menos deseable acoplamiento de contenido, ofreciendo ejemplos para ilustrar cada tipo.
+            h2.mb-4(data-aos="flip-up") Principio de acoplamiento en el diseño de <em>software</em>
+            p.mb-4(data-aos="fade-right") El documento se centra en el principio de acoplamiento en el diseño de <em>software</em>, destacando su importancia para lograr sistemas modulares, mantenibles y escalables. Se describen los niveles de acoplamiento, desde el ideal desacoplamiento completo hasta el menos deseable acoplamiento de contenido, ofreciendo ejemplos para ilustrar cada tipo.
 
             a.anexo.mb-4.bg-white.w-fit(:href="obtenerLink('/downloads/Anexo_1.pdf')" target="_blank")(data-aos="flip-up")
               .anexo__icono(:style="{'background-color': '#FCDFDB'}")
                 img(src="@/assets/template/icono-pdf.svg")
               .anexo__texto
-                p <strong>Anexo. </strong> Principio de acoplamiento en el diseño de software.
+                p <strong>Anexo. </strong> Principio de acoplamiento en el diseño de <em>software</em>.
 
-          .col-md-8.col-lg-4.order-1
+          .col-md-8.col-lg-4.order-1.mb-3.mb-lg-0
             figure(data-aos="zoom-in")
               img(src='@/assets/curso/tema1/15.png', alt='')
     
 
-    #t_1_2.titulo-segundo(data-aos="flip-up")
-      h2 #[span 1.2] Principio de modularidad en el diseño de software
+    #t_1_2.titulo-segundo(data-aos="flip-up").mt-5
+      h2 #[span 1.2] Principio de modularidad en el diseño de <em>software</em>
 
     .row.mb-5.justify-content-center.align-items-center
       .col-md-8.col-lg-4.order-2
         figure
           img(src="@/assets/curso/tema1/16.png", data-aos="zoom-in")
       .col-lg-8.order-1
-        p El principio de modularidad es un enfoque esencial en el diseño de software, que busca dividir un sistema complejo en partes más pequeñas y manejables, llamadas módulos. Cada módulo tiene una función específica y está diseñado para ser independiente o, al menos, para mantener una dependencia mínima con otros módulos. Este enfoque facilita el desarrollo, mantenimiento y evolución del software, mejorando su calidad.
+        p El principio de modularidad es un enfoque esencial en el diseño de <em>software</em>, que busca dividir un sistema complejo en partes más pequeñas y manejables, llamadas módulos. Cada módulo tiene una función específica y está diseñado para ser independiente o, al menos, para mantener una dependencia mínima con otros módulos. Este enfoque facilita el desarrollo, mantenimiento y evolución del <em>software</em>, mejorando su calidad.
         .bg-color-1.p-4(data-aos="fade-left").mb-3.mb-lg-0
           .row.align-items-center
             .col-lg-auto
@@ -211,7 +211,7 @@
 
     .bg-full-width-1.bg-fondo-2
       .px-4.px-md-5.pb-md-3
-        .row.justify-content-center
+        .row.justify-content-center.mb-3
           .col-lg-8
             figure
               img(src="@/assets/curso/tema1/18.svg", data-aos="zoom-in") 
@@ -236,7 +236,7 @@
                   li.mb-0.d-flex.p-2 
                     .lista-ol--cuadro__vineta
                       span 3
-                    p.mb-0 <b>Escalabilidad: </b>permite agregar nuevas funcionalidades sin reestructurar el software existente.
+                    p.mb-0 <b>Escalabilidad: </b>permite agregar nuevas funcionalidades sin reestructurar el <em>software</em> existente.
                   li.mb-0.d-flex.p-2 
                     .lista-ol--cuadro__vineta
                       span 4
@@ -245,7 +245,7 @@
                     .lista-ol--cuadro__vineta
                       span 5
                     p.mb-0 <b>Adaptabilidad: </b> los módulos independientes facilitan la adaptación del sistema a nuevas tecnologías o requisitos.
-              .col-lg-5(data-aos="zoom-in")
+              .col-md-8.col-lg-5(data-aos="zoom-in")
                 img.img-fluid(src='@/assets/curso/tema1/19.svg', style="max-width:486px", alt="").mx-auto.mx-lg-0.ms-lg-auto.mb-4.mb-lg-0
     
     TabsC.color-primario.mb-5
@@ -299,7 +299,7 @@
     .row.justify-content-center.align-items-center.bg-h85-2.mb-5
       .col-lg-12
         .row.justify-content-center.align-items-center
-          .col-lg-7(data-aos="fade-left")
+          .col-lg-7(data-aos="fade-left").mb-3
             ol.lista-ol--cuadro(data-aos="fade-up")
               li.d-flex.p-4
                 .lista-ol--cuadro__vineta
@@ -314,7 +314,7 @@
                   span 3
                 p.mb-0 Un módulo para la lógica de negocio.
             p.mb-0 Cada módulo interactúa mediante interfaces claras, lo que minimiza el impacto de los cambios en un módulo sobre los demás.          
-          .col-lg-5(data-aos="zoom-in")
+          .col-md-8.col-lg-5(data-aos="zoom-in")
             img.img-fluid(src='@/assets/curso/tema1/24.svg', style="max-width:486px", alt="").mx-auto.mx-lg-0.ms-lg-auto.mb-4.mb-lg-0
     
     p.mb-5 La modularidad en el diseño de sistemas ,ofrece tanto ventajas como desventajas, que deben considerarse cuidadosamente. 
@@ -333,7 +333,7 @@
           .col-lg-auto
             img(src="@/assets/curso/tema1/25.svg", style="max-width: 90px").mx-auto
           .col-lg(data-aos="fade-right")
-            p.mb-0 El principio de modularidad es esencial para construir sistemas de software mantenibles y escalables. Dividir un sistema en módulos funcionales con alta cohesión y bajo acoplamiento, permite gestionar la complejidad del desarrollo y facilita su evolución. Sin embargo, es crucial equilibrar la cantidad y tamaño de los módulos, para evitar complicaciones innecesarias. Este principio es un fundamento de metodologías modernas como la programación orientada a objetos, la arquitectura basada en microservicios y las prácticas de desarrollo ágil.
+            p.mb-0 El principio de modularidad es esencial para construir sistemas de <em>software</em> mantenibles y escalables. Dividir un sistema en módulos funcionales con alta cohesión y bajo acoplamiento, permite gestionar la complejidad del desarrollo y facilita su evolución. Sin embargo, es crucial equilibrar la cantidad y tamaño de los módulos, para evitar complicaciones innecesarias. Este principio es un fundamento de metodologías modernas como la programación orientada a objetos, la arquitectura basada en microservicios y las prácticas de desarrollo ágil.
 
 
 
@@ -349,18 +349,18 @@
 
             p.d-flex.my-4
               img.me-3(src='@/assets/componentes/link.svg' :style="{'max-width':'16px'}")
-              a(href="https://elibro.net/es/lc/tecnologicadeloriente/titulos/68913 " target="_blank" rel="noopener noreferrer") Echeverri, J. Aristizábal, M. & González, L. (2013). Reflexiones sobre ingeniería de requisitos y pruebas de software. Corporación Universitaria Remington. 
+              a(href="https://elibro.net/es/lc/tecnologicadeloriente/titulos/68913 " target="_blank" rel="noopener noreferrer") Echeverri, J. Aristizábal, M. & González, L. (2013). Reflexiones sobre ingeniería de requisitos y pruebas de <em>software</em>. Corporación Universitaria Remington. 
             p.d-flex.my-4
               img.me-3(src='@/assets/componentes/link.svg' :style="{'max-width':'16px'}")
               a(href="https://elblogdelprogramador.com/#gsc.tab=0 " target="_blank" rel="noopener noreferrer") El Blog Del Programador.
             p.d-flex.my-4
               img.me-3(src='@/assets/componentes/link.svg' :style="{'max-width':'16px'}")
-              a(href="https://www.euroinnova.com/https://www.autodesk.com/solutions/generative-design-ai-software?msockid=27322ed8fb286645002a3a85fa8767cb" target="_blank" rel="noopener noreferrer") Autodesk Generative Design.
+              a(href="https://www.euroinnova.com/https://www.autodesk.com/solutions/generative-design-ai-<em>software</em>?msockid=27322ed8fb286645002a3a85fa8767cb" target="_blank" rel="noopener noreferrer") Autodesk Generative Design.
             
 
             p.d-flex.my-4
               img.me-3(src='@/assets/template/icono-yt.svg' :style="{'max-width':'16px'}")
-              a(href="https://www.youtube.com/watch?v=STw8rKDFMaQ" target="_blank" rel="noopener noreferrer") Canarias JS. (2019). Simplicidad y otros principios del diseño de software. 
+              a(href="https://www.youtube.com/watch?v=STw8rKDFMaQ" target="_blank" rel="noopener noreferrer") Canarias JS. (2019). Simplicidad y otros principios del diseño de <em>software</em>. 
 
           .col-12.col-md-6.col-lg-3.offset-lg-1
             figure

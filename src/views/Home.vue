@@ -22,9 +22,9 @@
             .content-wrapper.px-lg-4.pt-lg-4.px-xxl-5.py-xxl-5.text-start
               p.home-main-title UNIDAD {{ `${globalData.numeroUnidad}` }}
               h1.home-title.mb-4 {{ globalData.tituloUnidad }}
-              p.descripcion.mb-4 El diseño de software, se fundamenta en principios como cohesión, acoplamiento y modularidad, que permiten desarrollar sistemas claros, escalables y fáciles de mantener. La cohesión asegura módulos con responsabilidades relacionadas; el acoplamiento busca minimizar dependencias, y la modularidad divide el sistema en componentes autónomos. Además, los diagramas UML facilitan la planificación del software al representar estructuras y dinámicas. Finalmente, el diseño orientado a objetos, organiza sistemas mediante clases, objetos y herencia.  
+              p.descripcion.mb-4 El diseño de <em>software</em>, se fundamenta en principios como cohesión, acoplamiento y modularidad, que permiten desarrollar sistemas claros, escalables y fáciles de mantener. La cohesión asegura módulos con responsabilidades relacionadas; el acoplamiento busca minimizar dependencias, y la modularidad divide el sistema en componentes autónomos. Además, los diagramas UML facilitan la planificación del <em>software</em> al representar estructuras y dinámicas. Finalmente, el diseño orientado a objetos, organiza sistemas mediante clases, objetos y herencia.  
               
-              p #[b Siempre se puede construir un software que transforme ideas en soluciones reales.]
+              p #[b Siempre se puede construir un <em>software</em> que transforme ideas en soluciones reales.]
 
               .button-container.mt-auto
                 router-link.btn-iniciar.w-100.w-md-auto(:to="{ name: 'introduccion' }")
