@@ -248,13 +248,16 @@
               .col-md-8.col-lg-5(data-aos="zoom-in")
                 img.img-fluid(src='@/assets/curso/tema1/19.svg', style="max-width:486px", alt="").mx-auto.mx-lg-0.ms-lg-auto.mb-4.mb-lg-0
     
+
+    p.mb-5 Las características de un buen diseño modular, son:
+
     TabsC.color-primario.mb-5
       .tabs-content.border.px-4.p-md-5.py-3(titulo="Alta cohesión" :icon="require('@/assets/bullets/icon-tab-c-4.svg')" )
         .row.justify-content-center
           .col-lg-7.col-xl-8.mb-4.mb-md-0.order-2
             h4 Alta cohesión
             p Cada módulo debe enfocarse en una tarea específica y contener elementos relacionados entre sí.  
-            p <b>Ejemplo:</b> un módulo dedicado exclusivamente a la autenticación de usuarios
+            p <b>Ejemplo:</b> un módulo dedicado exclusivamente a la autenticación de usuarios.
 
         
           .col-md-8.col-lg-5.col-xl-4.order-1.mb-3
